@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "lib": ["DOM", "es6", "ESNext"],
+
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strict": true
+  },
+  "include": ["src/*.tsx", "lib/*.tsx"],
+  "exclude": ["assets/js", "build", "node_modules", "vendor"]
+}

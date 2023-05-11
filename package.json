@@ -1,0 +1,59 @@
+{
+  "name": "liulock-reactable-synthethics-chatblock",
+  "version": "0.9.0",
+  "description": "A Wordpress Plugin Demonstrating Usage of same \"rendering\" code with \"Save\" and \"Edit\" callbacks of a Custom Block. Renders a Custom Block that functions as a chat box for awscyber.ai, and also allows additional gutenberg innerblocks if desired.",
+  "main": "build/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZIPING-LIU-CORPORATION/liulock-reactable-synthethics-chatblock.git"
+  },
+  "keywords": [
+    "Wordpress",
+    "Custom",
+    "Block",
+    "Type",
+    "Plugin",
+    "React",
+    "18",
+    "ReadDOM",
+    "18",
+    "Wordpress",
+    "Custom",
+    "Block",
+    "React",
+    "Hooks",
+    "Wordpress",
+    "Blocks"
+  ],
+  "author": "https://wakatime.com/@aws",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/ZIPING-LIU-CORPORATION/liulock-reactable-synthethics-chatblock/issues"
+  },
+  "homepage": "https://github.com/ZIPING-LIU-CORPORATION/liulock-reactable-synthethics-chatblock#readme",
+  "scripts": {
+    "build": "wp-scripts build",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start"
+  },
+  "devDependencies": {
+    "@types/wordpress__components": "^23.0.1",
+    "@wordpress/scripts": "^26.3.0",
+    "@types/wordpress__block-editor": "^11.5.1",
+    "@types/jquery": "^3.5.16",
+    "@types/prismjs": "^1.26.0",
+    "@types/react": "^18.2.5",
+    "@types/react-dom": "^18.2.3",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@wordpress/i18n": "^4.32.0"
+  }
+}
