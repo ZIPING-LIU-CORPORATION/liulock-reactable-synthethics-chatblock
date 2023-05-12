@@ -1,5 +1,4 @@
 // https://gscode.in/chat-box-design/ (inspiration)
-
 @import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,700");
 
 $body-bg-color: #7dd8ff;
@@ -10,14 +9,14 @@ $font-color-muted: #afafaf;
 $standard-padding: 20px 15px;
 $standard-radius: 13px;
 
-.flexbox {
+ div.wp-liusynthethics-reacted-chatbox > .flexbox {
   background-color: $body-bg-color;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.chat-box {
+ div.wp-liusynthethics-reacted-chatbox  .chat-box,
+ div.wp-liusynthethics-reacted-chatbox > .chat-box {
   background-color: $chat-bg-color;
   margin: 20px;
   width: 100%;
@@ -159,7 +158,8 @@ $standard-radius: 13px;
 }
 
 @media (min-width: 480px) {
-  .chat-box {
+    div.wp-liusynthethics-reacted-chatbox  .chat-box,
+  div.wp-liusynthethics-reacted-chatbox > .chat-box {
     width: 480px;
   }
 }
@@ -179,16 +179,16 @@ $standard-radius: 13px;
   }
 }
 
-button::-moz-focus-inner {
+ div.wp-liusynthethics-reacted-chatbox button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
-button {
+ div.wp-liusynthethics-reacted-chatbox button {
   outline: none;
 }
 
-h3 > small {
+ div.wp-liusynthethics-reacted-chatbox h3 > small {
   color: $font-color-muted;
   font-weight: normal;
 }
