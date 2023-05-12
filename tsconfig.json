@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "es5",
     "jsx": "react",
     "esModuleInterop": true,
     "baseUrl": ".",
     "resolveJsonModule": true,
-    "lib": ["DOM", "es6", "ESNext"],
-
+    "lib": ["DOM", "ESNext", "DOM.Iterable"],
+    "skipLibCheck": true,
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
-    "strict": true
+    "strict": true,
+    "module": "esnext",
   },
-  "include": ["src/*.tsx", "lib/*.tsx"],
+  "include": ["src/*.tsx", "lib/*.tsx", "src/*.json", "src/*.scss"],
   "exclude": ["assets/js", "build", "node_modules", "vendor"]
 }

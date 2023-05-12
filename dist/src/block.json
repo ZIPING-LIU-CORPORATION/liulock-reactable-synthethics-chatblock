@@ -1,0 +1,27 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 2,
+    "name": "liulock-reactable/synthethics-chatblock",
+    "version": "0.9.0",
+    "title": "LiuLock Synthethics React Chat Custom Block",
+    "category": "common",
+    "icon": "chart-line",
+    "description": "Block with advanced AI Interactables.",
+    "supports": {
+        "html": false
+    },
+    "textdomain": "liulock-reactable",
+    "editorScript": "file:./index.tsx",
+    "editorStyle": "file:./index.css",
+    "attributes": {
+        "title": {
+            "type": "string",
+            "source": "html",
+            "selector": "h3"
+        },
+        "blockId": {
+            "type": "string"
+        }
+    },
+    "style": "file:./style-index.css"
+}

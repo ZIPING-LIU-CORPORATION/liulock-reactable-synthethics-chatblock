@@ -4,7 +4,6 @@
  * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-registration/
  */
 import { registerBlockType } from "@wordpress/blocks";
-
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
  * All files containing `style` keyword are bundled together. The code used
@@ -69,7 +68,9 @@ registerBlockType<{
               id={`editor-${props.attributes?.blockId}`}
               className="wp-liusynthethics-reacted-chatbox"
             ></div>
-            <script src="/wp-content/plugins/liulock-synthethics/build/save.js" ></script>
+            <script 
+            type="module"
+            src="/wp-content/plugins/liulock-reactable-synthethics-chatblock/build/save.js" ></script>
             <script>
               {
                 `

@@ -46,10 +46,10 @@ module.exports = (env) => {
       ],
     },
 
-    mode: "development",
+    mode: "production",
 
     entry: {
-      save: "./lib/save.tsx",
+      save: "./dist/lib/save.js",
       editorshelper: "./lib/ReactEditor.tsx",
     },
 

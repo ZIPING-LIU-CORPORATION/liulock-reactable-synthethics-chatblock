@@ -17,7 +17,6 @@ export default function EditorsHelper(props?: {
   const languages = Prism.languages;
 
   const React = window.React;
-
   const [input, setInput] = React.useState<string>("");
   const [isLoaded, setIsLoaded] = React.useState<boolean>(false);
   const [messages, setMessages] = React.useState<
