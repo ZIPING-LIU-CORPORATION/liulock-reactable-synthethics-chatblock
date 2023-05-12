@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/ZIPING-LIU-CORPORATION/liulock-reactable-synthethics-chatblock#readme",
   "scripts": {
-    "build": "wp-scripts build && npm run build:save",
+    "build": "npm run build:roll && wp-scripts build && npm run build:save",
     "format": "wp-scripts format",
     "lint:css": "wp-scripts lint-style",
     "build:roll": "rimraf dist && tsc -p tsconfig.build.json && rollup -c rollup.config.js",
