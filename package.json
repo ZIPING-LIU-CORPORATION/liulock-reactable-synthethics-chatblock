@@ -32,13 +32,14 @@
   },
   "homepage": "https://github.com/ZIPING-LIU-CORPORATION/liulock-reactable-synthethics-chatblock#readme",
   "scripts": {
-    "build": "wp-scripts build",
+    "build": "wp-scripts build && npm run build:save",
     "format": "wp-scripts format",
     "lint:css": "wp-scripts lint-style",
     "lint:js": "wp-scripts lint-js",
     "packages-update": "wp-scripts packages-update",
     "plugin-zip": "wp-scripts plugin-zip",
-    "start": "wp-scripts start"
+    "start": "wp-scripts start",
+    "build:save": "webpack --config ./webpack.config.save.js"
   },
   "devDependencies": {
     "@types/wordpress__components": "^23.0.1",
@@ -54,6 +55,9 @@
     "react-dom": "^18.2.0"
   },
   "dependencies": {
-    "@wordpress/i18n": "^4.32.0"
+    "@wordpress/i18n": "^4.32.0",
+    "framer-motion": "^10.12.7",
+    "prismjs": "^1.29.0",
+    "react-simple-code-editor": "^0.13.1"
   }
 }

@@ -65,6 +65,10 @@ registerBlockType<{
 
               <InnerBlocks.Content {...innerBlockProps} />
             </div>
+            <div
+              id={`editor-${props.attributes?.blockId}`}
+              className="wp-liusynthethics-reacted-chatbox"
+            ></div>
           </div>
         </div>
       </div>

@@ -19,6 +19,8 @@ import { useBlockProps, InnerBlocks, RichText } from "@wordpress/block-editor";
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import { BlockEditProps } from "wordpress__blocks";
+
+import EditorsHelper from "../lib/ReactEditor";
 /**
  * Create the Edit Mode rendering of the Reactable Synthethics Chatbox Custom BLock Type
  * @param props - saved as hard-coded string like attributes used for both editing and rendering.
@@ -60,6 +62,14 @@ export function Edit(
 
             <InnerBlocks {...innerBlockProps} />
           </div>
+          <div
+            className="wp-liusynthethics-reacted-chatbox"
+            id={`editor-${attributes.blockId}`}
+          >
+            <EditorsHelper />
+          </div>
+          <script></script>
+          <script></script>
         </div>
       </div>
     </div>
