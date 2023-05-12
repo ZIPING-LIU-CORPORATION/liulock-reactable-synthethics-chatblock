@@ -6,8 +6,8 @@
  * Description: A Wordpress Plugin Demonstrating Usage of same \"rendering\" code with \"Save\" and \"Edit\" callbacks of a Custom Block. Renders a Custom Block that functions as a chat box for awscyber.ai, and also allows additional gutenberg innerblocks if desired
  * Author: LIU LLC
  * Author URI: https://wakatime.com/@aws
- * License: BSD 3-Clause
- * License URI: https://opensource.org/license/bsd-3-clause/
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  */
 if (!function_exists("liu_synthethics_reactable_plugin_block")) {
     function liu_synthethics_reactable_plugin_block()
