@@ -9,14 +9,13 @@ $font-color-muted: #afafaf;
 $standard-padding: 20px 15px;
 $standard-radius: 13px;
 
- div.wp-liusynthethics-reacted-chatbox > .flexbox {
+.wp-block-liulock-reactable-synthethics-chatblock.wp-block-liulock-synthethics > .flexbox {
   background-color: $body-bg-color;
   display: flex;
   justify-content: center;
   align-items: center;
 }
- div.wp-liusynthethics-reacted-chatbox  .chat-box,
- div.wp-liusynthethics-reacted-chatbox > .chat-box {
+div.wp-block-liulock-reactable-synthethics-chatblock.wp-block-liulock-synthethics > .flexbox > .chat-box {
   background-color: $chat-bg-color;
   margin: 20px;
   width: 100%;
@@ -32,7 +31,7 @@ $standard-radius: 13px;
     border-bottom: solid 1px #cfcfcf;
     box-sizing: border-box;
   }
-  > div.wp-liusynthethics-reacted-chatbox > .chat-box-body {
+  > .wp-liusynthethics-reacted-chatbox > .chat-box-body {
     height: 100%;
     display: flex;
     overflow: auto;
@@ -120,7 +119,7 @@ $standard-radius: 13px;
     }
   }
 
-  > div.wp-liusynthethics-reacted-chatbox > .chat-box-footer {
+  > .wp-liusynthethics-reacted-chatbox > .chat-box-footer {
     width: 100%;
     padding: $standard-padding;
     border-top: solid 1px #cfcfcf;
@@ -178,17 +177,16 @@ $standard-radius: 13px;
     transform: translateY(0px);
   }
 }
-
- div.wp-liusynthethics-reacted-chatbox button::-moz-focus-inner {
+ .chat-box-footer > button::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
 
- div.wp-liusynthethics-reacted-chatbox button {
+ .chat-box-footer >  button {
   outline: none;
 }
 
- div.wp-liusynthethics-reacted-chatbox h3 > small {
+ .chat-box-header >  h3 > small {
   color: $font-color-muted;
   font-weight: normal;
 }

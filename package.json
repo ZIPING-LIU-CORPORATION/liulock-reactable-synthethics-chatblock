@@ -1,6 +1,6 @@
 {
   "name": "liulock-reactable-synthethics-chatblock",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Wordpress Plugin Demonstrating Usage of same \"rendering\" code with \"Save\" and \"Edit\" callbacks of a Custom Block. Renders a Custom Block that functions as a chat box for awscyber.ai, and also allows additional gutenberg innerblocks if desired.",
   "main": "build/index.js",
   "repository": {
