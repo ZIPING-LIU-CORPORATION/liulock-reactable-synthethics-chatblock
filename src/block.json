@@ -13,15 +13,15 @@
   "textdomain": "liulock-reactable",
   "editorScript": "file:./index.tsx",
   "editorStyle": "file:./index.css",
-    "attributes": {
-        "title": {
-            "type": "string",
-            "source": "html",
-            "selector": "h3"
-        },
-        "blockId": {
-            "type": "string"
-        }
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h3"
     },
-    "style": "file:./style-index.css"
+    "blockId": {
+      "type": "string"
+    }
+  },
+  "style": "file:./style-index.css"
 }

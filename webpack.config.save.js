@@ -1,7 +1,6 @@
 const path = require("path");
 const fs = require("fs");
 
-
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env) => {

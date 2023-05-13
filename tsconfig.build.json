@@ -11,8 +11,6 @@
     "src/stories/**"
   ],
   "compilerOptions": {
-    "outDir": "dist",
-
+    "outDir": "dist"
   }
-  
 }

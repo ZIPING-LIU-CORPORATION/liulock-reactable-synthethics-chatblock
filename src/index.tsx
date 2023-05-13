@@ -68,18 +68,17 @@ registerBlockType<{
               id={`editor-${props.attributes?.blockId}`}
               className="wp-liusynthethics-reacted-chatbox"
             ></div>
-            <script 
-            type="module"
-            src="/wp-content/plugins/liulock-reactable-synthethics-chatblock/build/save.js" ></script>
+            <script
+              type="module"
+              src="/wp-content/plugins/liulock-reactable-synthethics-chatblock/build/save.js"
+            ></script>
             <script>
-              {
-                `
+              {`
                   document.addEventListener('DOMContentLoaded', ()=>{
                     const myLiuSynthethicsPluginNuclearReactor = window.LiuSynthethicsPluginNuclearReactor.bind(this);
                     myLiuSynthethicsPluginNuclearReactor('${props.attributes.blockId}');
                   });
-                `
-              }
+                `}
             </script>
           </div>
         </div>
