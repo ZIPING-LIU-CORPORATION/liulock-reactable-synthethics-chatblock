@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: LiuLock Synthethics™ Reactable Custom Chatbox Block
- * Version: 1.0.0
+ * Version: 2.0.0
  * Plugin URI: https://github.com/ZIPING-LIU-CORPORATION/liulock-reactable-synthethics-chatblock
  * Description: A Wordpress Plugin Demonstrating Usage of same \"rendering\" code with \"Save\" and \"Edit\" callbacks of a Custom Block. Renders a Custom Block that functions as a chat box for awscyber.ai, and also allows additional gutenberg innerblocks if desired
  * Author: LIU LLC

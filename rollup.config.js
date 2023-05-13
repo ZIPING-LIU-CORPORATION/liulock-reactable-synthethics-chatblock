@@ -9,6 +9,10 @@
 const wpResolve = require("rollup-plugin-wp-resolve");
 const babel = require("rollup-plugin-babel");
 const postcssModule = require("postcss");
+const cssnanoMachines = require("cssnano");
+
+const postcss = require('rollup-plugin-postcss');
+
 const autoprefixer = require("autoprefixer");
 const nodeResolve = require("@rollup/plugin-node-resolve");
 const scss = require("rollup-plugin-scss");
@@ -16,7 +20,6 @@ const json = require("@rollup/plugin-json");
 const resolve = require("@rollup/plugin-node-resolve").default;
 const commonjs = require("@rollup/plugin-commonjs");
 const typescript = require("@rollup/plugin-typescript");
-const postcss = require("rollup-plugin-postcss");
 const visualizer = require("rollup-plugin-visualizer").visualizer;
 const { terser } = require("rollup-plugin-terser");
 const fs = require("fs");
@@ -49,7 +52,7 @@ const getFiles = (entry, extensions = [], excludeExtensions = []) => {
 };
 
 export default {
-  input: [...getFiles("./src", [".ts", ".tsx", "scss"])],
+  input: [...getFiles("./src", [".ts", ".tsx", ".json", ".scss"])],
   output: {
     dir: "dist",
 
@@ -60,17 +63,29 @@ export default {
     sourcemap: true,
   },
   plugins: [
+   
     scss({
       output: "dist/style-index.css",
-      processor: () => postcssModule([autoprefixer()]),
+      processor: () =>
+        postcssModule([
+          autoprefixer(),
+          cssnanoMachines({
+            preset: "default",
+          }),
+        ]),
       include: ["src/style.scss"],
     }),
     scss({
       output: "dist/index.css",
-      processor: () => postcssModule([autoprefixer()]),
+      processor: () =>
+        postcssModule([
+          autoprefixer(),
+          cssnanoMachines({
+            preset: "default",
+          }),
+        ]),
       include: ["src/editor.scss"],
     }),
-
     resolve(),
     commonjs(),
     json(),
@@ -79,7 +94,6 @@ export default {
       declaration: true,
       declarationDir: "dist",
     }),
-    postcss(),
     terser(),
     visualizer({
       filename: "bundle-analysis.html",
@@ -93,5 +107,12 @@ export default {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
     }),
     wpResolve(),
+
+    postcss({
+      modules: true,
+      cssnano: {
+        preset: "default",
+      },
+    })
   ],
 };
