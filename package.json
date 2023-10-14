@@ -81,5 +81,20 @@
     "framer-motion": "^10.12.7",
     "prismjs": "^1.29.0",
     "react-simple-code-editor": "^0.13.1"
-  }
+  },
+   "files":[
+    "dist",
+    "build",
+    "package.json",
+    "index.php",
+ 
+    "README.md",
+    "readme.txt",
+    "tsconfig.json",
+    "tsconfig.build.json",
+    "webpack.config.js",
+    "webpack.config.save.js",
+    "package-lock.json",
+    "rollup.config.js"
+  ]
 }

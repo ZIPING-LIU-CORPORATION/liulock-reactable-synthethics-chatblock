@@ -51,9 +51,18 @@ const rename = () => {
 
   const cssFiles = glob.sync(join(process.cwd(), "dist", "*.css"));
 
+  cssFiles.push(...(glob.sync(join(process.cwd(), "dist", "*.css.map"))));
+  cssFiles.push(...(glob.sync(join(process.cwd(), "dist", "*inject.es-*.js"))));
+
+  cssFiles.push(
+  ...(glob.sync(join(process.cwd(), "dist", "*inject.es-*.js.map")))
+  );
+  console.log("cssFiles", cssFiles)
+
   if (cssFiles) {
     cssFiles.forEach((filePath) => {
       // copy to build
+      console.log("filePath", filePath)
       fs.copyFile(filePath, filePath.replace("dist", "build"), (err) => {
         if (err) throw err;
         console.log("source.txt was copied to destination.txt");
@@ -82,7 +91,7 @@ module.exports = (env) => {
     },
 
     entry: {
-      index: "./dist/src/index.js",
+      index: "./dist/index.js",
     },
 
     plugins: [

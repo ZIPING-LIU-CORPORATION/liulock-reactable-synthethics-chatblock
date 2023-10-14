@@ -1,18 +1,9 @@
-// const commonjs from '@rollup/plugin-commonjs';
-// import typescript from '@rollup/plugin-typescript';
-
-// import postcss from "rollup-plugin-postcss";
-// import visualizer from 'rollup-plugin-visualizer';
-// import { terser } from 'rollup-plugin-terser';
-
-// import fs from 'fs';
-const wpResolve = require("rollup-plugin-wp-resolve");
+ 
 const babel = require("rollup-plugin-babel");
 const postcssModule = require("postcss");
 const cssnanoMachines = require("cssnano");
-
 const postcss = require('rollup-plugin-postcss');
-
+const wpResolve = require("@rollup/plugin-node-resolve");
 const autoprefixer = require("autoprefixer");
 const nodeResolve = require("@rollup/plugin-node-resolve");
 const scss = require("rollup-plugin-scss");
@@ -55,17 +46,17 @@ export default {
   input: [...getFiles("./src", [".ts", ".tsx", ".json", ".scss"])],
   output: {
     dir: "dist",
-
-    // format that has no imports/exports
-    format: "esm",
-    preserveModules: true,
-
+    
+    format: "es",
+    exports: "named",
     sourcemap: true,
+
   },
   plugins: [
    
     scss({
       output: "dist/style-index.css",
+      sourceMap: true,
       processor: () =>
         postcssModule([
           autoprefixer(),
@@ -77,6 +68,7 @@ export default {
     }),
     scss({
       output: "dist/index.css",
+      sourceMap: true,
       processor: () =>
         postcssModule([
           autoprefixer(),
@@ -92,6 +84,7 @@ export default {
     typescript({
       tsconfig: "./tsconfig.build.json",
       declaration: true,
+      sourceMap: true,
       declarationDir: "dist",
     }),
     terser(),
@@ -103,7 +96,7 @@ export default {
       extensions: [".js", ".jsx", ".ts", ".tsx"],
     }),
     babel({
-      presets: ["@babel/preset-react", "@babel/preset-typescript"],
+      presets: ["@babel/preset-react", "@babel/preset-typescript", "@babel/preset-env"],
       extensions: [".js", ".jsx", ".ts", ".tsx"],
     }),
     wpResolve(),

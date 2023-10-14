@@ -49,7 +49,7 @@ module.exports = (env) => {
 
     entry: {
       save: "./dist/lib/save.js",
-      editorshelper: "./lib/ReactEditor.tsx",
+      editorshelper: "./dist/editor.js",
     },
 
     output: {
